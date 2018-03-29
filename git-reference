@@ -1,1 +1,24 @@
 git config --global credential.helper 'cache --timeout=36000'
+
+
+project reference:
+
+
+git issue:
+git -c http.sslVerify=false clone https://github.com/dhananjay762/automation-framework.git
+(https://stackoverflow.com/questions/11621768/how-can-i-make-git-accept-a-self-signed-certificate)
+
+if git repository is in control:
+git config http.sslVerify false
+
+while installing protractor with npm: (if error = unable to verify the first certificate)
+npm config set strict-ssl false
+npm install -g protractor
+npm config set strict-ssl true
+
+(looks like https://registry.npmjs.org/ the certificate is not trusted behind the proxy
+
+my solution for this was to set the registry to the http version in config)
+
+npm cache clean
+webdriver-manager update --ignore_ssl
