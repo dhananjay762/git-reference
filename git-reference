@@ -11,6 +11,15 @@ git -c http.sslVerify=false clone https://github.com/dhananjay762/automation-fra
 if git repository is in control:
 git config http.sslVerify false
 
+
+git remote set-url origin <giturl>
+
+there is no tracking information for the current branch git pull:
+git branch --set-upstream-io=origin/master master
+
+refusing to merge unrelated histories git pull:
+git pull origin <branch> --allow-unrelated-histories
+
 while installing protractor with npm: (if error = unable to verify the first certificate)
 npm config set strict-ssl false
 npm install -g protractor
