@@ -31,3 +31,9 @@ my solution for this was to set the registry to the http version in config)
 
 npm cache clean
 webdriver-manager update --ignore_ssl
+
+For Python (Spyder - conda package)
+conda config --add channels conda-forge
+(conda-forge is a community-led conda channel of installable packages.)
+and then install any package with conda :-
+conda install fuzzywuzzy
